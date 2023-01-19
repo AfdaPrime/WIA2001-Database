@@ -11,8 +11,8 @@
 
 
 ## DDL Queries
-### CREATE
 
+### CREATE
 ```SQL
 CREATE TABLE Staff (
 staff_id VARCHAR(20) PRIMARY KEY,
@@ -66,6 +66,82 @@ FOREIGN KEY(staff_id) REFERENCES Staff (staff_id)
 );
 ```
 
+### DROP
+```SQL
+DROP TABLE BOOKING;
+DROP TABLE Booking_Details;
+DROP TABLE CUSTOMER;
+DROP TABLE ROOM;
+DROP TABLE STAFF;
+```
+
+
+### ALTER & RENAME
+```SQL
+ALTER TABLE ROOM
+RENAME TO ROOMS;
+```
+
+
+### ALTER & ADD
+```SQL
+ALTER TABLE Staff
+ADD sex VARCHAR(10);
+```
+
+
+## DML Queries
+
+### INSERT
+```SQL
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5460','Amy','0102799128','39 Queen Street','Manager',NULL);
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5465','Karen','0102798129','98 newmarch Street','House Keeping Supervisor','880218-54-5460');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5464','Jack','0102797128','42 Colletts Street','House Keeping','880218-54-5465');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5463','Lin','0102796129','40 newmarch Street','House Keeping','880218-54-5465');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5461','Erricka','0102988765','50 Queen Street','Front Office Supervisor','880218-54-5460');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5462','Earnell','0112798129','50 newmarch Street','Front Office','880218-54-5461');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5410','Erminie','0102197128','50 Colletts Street','Front Office','880218-54-5461');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5411','Eluteria','0102716129','44 newmarch Street','House Keeping','880218-54-5465');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5412','Elleana','0102799128','21 Queen Street','Front Office','880218-54-5461');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5413','Emelyn','0102798119','30 newmarch Street','House Keeping','880218-54-5465');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5414','Edwena','0102797120','99 Colletts Street','Front Office','880218-54-5461');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5415','Eliannys','0102790129','100 newmarch Street','House Keeping','880218-54-5465');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5416','Erdene','0102799188','88 Queen Street','Front Office','880218-54-5461');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5417','Emilly','0102798349','28 newmarch Street','Staff','880218-54-5460');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5418','Finbar','0102797139','56 Colletts Street','Staff','880218-54-5460');
+
+INSERT INTO Staff(staff_id, staff_name, staff_phone, staff_address, staff_position, super_id
+)VALUES ('880218-54-5419','Fischer','0102709679','74 newmarch Street','Staff','880218-54-5460');
+```
 
 
 
