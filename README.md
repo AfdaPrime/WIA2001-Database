@@ -481,7 +481,7 @@ INSERT INTO Booking (book_num, room_number,staff_id)VALUES (18,119,'880218-54-54
 INSERT INTO Booking (book_num, room_number,staff_id)VALUES (18,120,'880218-54-5408');
 INSERT INTO Booking (book_num, room_number,staff_id)VALUES (19,220,'880218-54-5415');
 INSERT INTO Booking (book_num, room_number,staff_id)VALUES (20,319,'880218-54-5418');
-INSERT INTO Booking (book_num, room_number,staff_id)VALUES (20,131,'880218-54-5419');
+INSERT INTO Booking (book_num, room_number,staff_id)VALUES (20,129,'880218-54-5419');
 ```
 - To display all records from **Booking** table
 ```SQL
@@ -522,10 +522,13 @@ A DML (data manipulation language) refers to a computer programming language tha
 #### INSERT statement is used to add a single record or multiple records into the table.
 
 ### DELETE
-#### The DELETE statement removes entire rows of data from a specified table or view. If a staff leaves, the according record needs to be deleted from the Staff Table.
+#### The DELETE statement removes entire rows of data from a specified table or view. If a room won't be offered to customer anymore, the according record needs to be deleted in the room table.
 ```SQL
-DELETE FROM staff
-WHERE staff_name='Lin';
+DELETE FROM room WHERE room_number = 101;
+
+SELECT *
+FROM ROOM
+WHERE room_number = 101;
 ```
 
 ### SELECT
